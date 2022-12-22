@@ -1,0 +1,12 @@
+<div class="containerDiv">
+    <div class="form-outline mb-4 innerDiv">
+        <input id="urlDiv"
+            class="form-control form-control-lg myForm myInput" placeholder="Enter URL here" [(ngModel)]="longURL" />
+        <button class="btn btn-success btn-lg btn-block button myForm" (click)="shortenURL()" >Short URL</button>
+    </div>
+    <div class="form-outline mb-4 innerDiv">
+        <input id="shortURL"
+        class="form-control form-control-lg myForm myInput" disabled [value]="shortURL"/>
+        <button class="btn btn-success btn-lg btn-block button myForm" (click)="copyLink()" >Copy</button>
+    </div>
+</div>

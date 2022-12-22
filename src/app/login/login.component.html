@@ -1,0 +1,32 @@
+<div>
+    <section class="mainContainer">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+      
+                  <h3 class="mb-5">Sign in</h3>
+      
+                  <div class="form-outline mb-4">
+                    <input type="email" class="form-control form-control-lg myForm" placeholder="Email" #email (keyup)="checkEmailValidity(email)" />
+                    <span *ngIf="!isEmailValid" class="text-warning">please enter valid email !!</span>
+                  </div>
+      
+                  <div class="form-outline mb-4">
+                    <input type="password" class="form-control form-control-lg myForm" placeholder="Password" #password (keyup)="checkPasswordValidity(password)" />
+                    <span *ngIf="!isPasswordValid" class="text-warning">password should be minimum 4 characters !!</span>
+                  </div>
+      
+                  <button class="btn btn-success btn-lg btn-block button myForm" [disabled]="enableDisableLogin()" (click)="login()" >Login</button>
+                  <button class="btn btn-success btn-lg btn-block button myForm" (click)="signup()" >Signup</button>
+
+                  <div *ngIf="!isCorrectCredentials" class="text-warning">Please enter valid credentials !!</div>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</div>
